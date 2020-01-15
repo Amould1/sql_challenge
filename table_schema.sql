@@ -8,7 +8,7 @@ CREATE TABLE "departments" (
 
 Create table "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept-no" varchar   NOT NULL,
+    "dept_no" varchar   NOT NULL,
     "from_date" varchar   NOT NULL,
     "to_date" varchar   NOT NULL,
 	PRIMARY KEY (
@@ -64,7 +64,7 @@ REFERENCES "dept_manager" ("dept_no");
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "employees" ("emp_no");
 
-ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_dept-no" FOREIGN KEY("dept-no")
+ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_dept-no" FOREIGN KEY("dept_no")
 REFERENCES "departments" ("dept_no");
 
 ALTER TABLE "dept_manager" ADD CONSTRAINT "fk_dept_manager_emp_no" FOREIGN KEY("emp_no")
